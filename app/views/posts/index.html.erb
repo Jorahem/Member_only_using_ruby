@@ -1,0 +1,15 @@
+<h1>Secret Posts</h1>
+
+<% @posts.each do |post| %>
+
+<div class="post">
+
+<p><%= post.content %></p>
+
+<% if user_signed_in? %>
+<p class="author">Written by <%= post.user.email %></p>
+<% end %>
+
+</div>
+
+<% end %>
